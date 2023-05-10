@@ -1,4 +1,3 @@
 #!/usr/bin/python3
-#4-print_hexa.py
-for number in range(0, 99):
-    print(f"{} = {}".format(number, hex(number)))
+for num in range(0, 99):
+    print("{:d} = {}".format(num, hex(num)))
