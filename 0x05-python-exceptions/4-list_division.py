@@ -1,21 +1,17 @@
 #!/usr/bin/python3
+
 def list_division(my_list_1, my_list_2, list_length):
-"""divides element by element 2 lists."""
-    i = 0
-    ls = []
-    result = 0
-    for i in range(0, list_length):
+    new_list = []
+    for i in range(list_length):
+        c = 0
         try:
-            result = (my_list_1[i] / my_list_2[i])
-        except TypeError:
-            result = 0
-            print("wrong type")
+            c = my_list_1[i] / my_list_2[i]
         except ZeroDivisionError:
-            result = 0
-            print("division by 0")
+            print('division by 0')
         except IndexError:
-            result = 0
-            print("out of range")
+            print('out of range')
+        except Exception:
+            print('wrong type')
         finally:
-            ls.append(result)
-    return ls
+            new_list.append(c)
+    return new_list
